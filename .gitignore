@@ -34,7 +34,7 @@
 # venv
 venv/
 
-# cmake
+# cmake specific stuff
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -48,5 +48,8 @@ CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
 
-# macOS
-main.plist
+# macOS specific stuff
+*.plist
+
+# uncrustify specific stuff
+defaults.cfg
