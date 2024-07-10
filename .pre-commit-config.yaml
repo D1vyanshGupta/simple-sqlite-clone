@@ -1,0 +1,18 @@
+default_install_hook_types: [pre-commit, commit-msg]
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.27.0
+    hooks:
+      - id: commitizen
+  - repo: https://github.com/pocc/pre-commit-hooks
+    rev: v1.3.5
+    hooks:
+      - id: clang-format
+        args: [--style=Google]
+      - id: clang-tidy
+      - id: oclint
+      - id: uncrustify
+      - id: cppcheck
+      - id: cpplint
+      - id: include-what-you-use
+        args: ["-Xiwyu", "--error=1"]
