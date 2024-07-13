@@ -1,32 +1,19 @@
-# Prerequisites
-*.d
+# virtualenv for pre-commit
+venv/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# vscode workspace configuration
+.vscode/
 
-# Precompiled Headers
-*.gch
-*.pch
+# clang *.plist files
+*.plist
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# cmake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# project binary
+dgSqlite
