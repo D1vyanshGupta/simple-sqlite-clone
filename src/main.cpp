@@ -1,5 +1,7 @@
 // Copyright [2024] <Divyansh Gupta>
+#include <iostream>
 
 int main() {
-    return 0; 
+  std::cout << "Hello World!";
+  return 0;
 }
