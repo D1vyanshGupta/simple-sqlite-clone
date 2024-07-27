@@ -7,13 +7,5 @@ venv/
 # clang *.plist files
 *.plist
 
-# cmake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-CTestTestfile.cmake
-Makefile
-compile_commands.json
-
-# project binary
-dgSqlite
+# build directory
+build/
