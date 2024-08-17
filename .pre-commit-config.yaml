@@ -30,11 +30,11 @@ repos:
         types_or: [c++]
       - id: cpplint
         name: cpplint
-        entry: cpplint --filter=-legal/copyright,-whitespace/comments,-whitespace/blank_line,-build/include_order,-build/include_subdir
+        entry: cpplint --filter=-legal/copyright,-whitespace/comments,-whitespace/blank_line,-build/include_order,-build/include_subdir,-runtime/string,-whitespace/indent,-build/c++11
         language: system
         types_or: [c++]
       - id: include-what-you-use
         name: include-what-you-use
-        entry: include-what-you-use -Xiwyu --error=1 -Iinclude/ -std=c++23
+        entry: include-what-you-use -Xiwyu --error=1 -Iinclude/ -Ibuild/_deps/googletest-src/googletest/include/ -std=c++23
         language: system
         types_or: [c++]

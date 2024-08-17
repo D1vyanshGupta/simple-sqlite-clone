@@ -6,10 +6,10 @@
 
 void print_prompt() { std::cout << CMD_PREFIX; }
 
-void read_input_from_stream(std::string *inputBuffer, std::istream &istream) {
-  std::getline(istream, *inputBuffer);
+void read_input_from_stream(std::string *input_buffer, std::istream &istream) {
+  std::getline(istream, *input_buffer);
 
-  if ((*inputBuffer).length() == 0) {
+  if ((*input_buffer).length() == 0) {
     throw std::runtime_error(ERROR_READING_INPUT_STREAM);
   }
 }

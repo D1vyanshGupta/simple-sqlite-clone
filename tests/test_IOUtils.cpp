@@ -1,13 +1,14 @@
 #include "IOUtils.hpp"
+#include "gtest/gtest.h"
+#include <__fwd/sstream.h>
 #include <format>
-#include <gtest/gtest.h>
 #include <sstream>
 #include <stdexcept>
 #include <string>
 
 TEST(ReadInput, HandlesValidInput) {
   // setup input buffer
-  std::string inputBuffer;
+  std::string input_buffer;
 
   // populate prepare mock data
   std::string lineOne = "line1";
@@ -18,15 +19,15 @@ TEST(ReadInput, HandlesValidInput) {
   std::istringstream inputStream(mockData);
 
   // read mockData from stream
-  read_input_from_stream(&inputBuffer, inputStream);
+  read_input_from_stream(&input_buffer, inputStream);
 
   // assert string before newline was correctly read
-  EXPECT_EQ(inputBuffer, lineOne);
+  EXPECT_EQ(input_buffer, lineOne);
 }
 
 TEST(ReadInput, ThrowsRuntimeErrorForInvalidInput) {
   // setup input buffer
-  std::string inputBuffer;
+  std::string input_buffer;
 
   // populate prepare mock data
   std::string invalidData = "\n";
@@ -37,6 +38,6 @@ TEST(ReadInput, ThrowsRuntimeErrorForInvalidInput) {
   // assert runtime exception is throws
 
   // cppcheck-suppress unknownMacro
-  EXPECT_THROW(read_input_from_stream(&inputBuffer, inputStream);
+  EXPECT_THROW(read_input_from_stream(&input_buffer, inputStream);
                , std::runtime_error);
 }

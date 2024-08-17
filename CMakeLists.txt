@@ -14,6 +14,10 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -fcolor-diagnostics -fans
 # Define source code library
 add_library(source_code_lib OBJECT
     ${PROJECT_SOURCE_DIR}/src/IOUtils.cpp
+    ${PROJECT_SOURCE_DIR}/src/MetaCommand.cpp
+    ${PROJECT_SOURCE_DIR}/src/Statement.cpp
+    ${PROJECT_SOURCE_DIR}/src/Utils.cpp
+    ${PROJECT_SOURCE_DIR}/src/ReferenceWrapperString.cpp
 )
 
 # Specify include directories for the source code library
@@ -44,6 +48,9 @@ FetchContent_MakeAvailable(googletest)
 # Define tests library
 add_library(tests_lib OBJECT
     ${PROJECT_SOURCE_DIR}/tests/test_IOUtils.cpp
+    ${PROJECT_SOURCE_DIR}/tests/test_MetaCommand.cpp
+    ${PROJECT_SOURCE_DIR}/tests/test_Statement.cpp
+    ${PROJECT_SOURCE_DIR}/tests/test_Utils.cpp
 )
 
 # Specify include directories for the tests library
