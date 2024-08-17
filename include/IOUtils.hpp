@@ -6,6 +6,6 @@
 
 void print_prompt();
 
-void read_input_from_stream(std::string *inputBuffer, std::istream &istream);
+void read_input_from_stream(std::string *input_buffer, std::istream &istream);
 
 #endif // INCLUDE_IOUTILS_HPP_
